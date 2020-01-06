@@ -7,13 +7,12 @@ node {
    
    stage ('build the packages') {
       // mvn package
-	  sh 'mvn clean package'
+	  sh 'mvn package'
    }
 
     stage ('archival') {
      // archiving artifacts
 	 archive 'target/*.jar'
    }
-
 }
 
